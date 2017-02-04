@@ -1,5 +1,5 @@
 install: package.json Gemfile
-	npm install && bundle install
+	yarn && bundle install
 
 build: node_modules Gemfile.lock
 	bundle exec ./node_modules/grunt-cli/bin/grunt build
@@ -14,7 +14,7 @@ dev-server:
 	make dev server -j2
 
 node_modules: package.json
-	npm install
+	yarn
 
 Gemfile.lock: Gemfile
 	bundle install
