@@ -48,41 +48,39 @@
 
 $global-font-size: 100%;
 $global-width: rem-calc(1200);
-$global-lineheight: 1.4;
+$global-lineheight: 1.5;
 $foundation-palette: (
-  primary: #006AE3,
-  secondary: #F3E100,
+  primary: #1779ba,
+  secondary: #767676,
   success: #3adb76,
   warning: #ffae00,
   alert: #cc4b37,
 );
-@include add-foundation-colors;
-$tertiary-color: lighten($primary-color, 6);
 $light-gray: #e6e6e6;
 $medium-gray: #cacaca;
 $dark-gray: #8a8a8a;
-$black: #000;
-$white: #fff;
-$body-background: $primary-color;
-$body-font-color: $white;
-$body-font-family: 'Space Mono', monospace;
+$black: #0a0a0a;
+$white: #fefefe;
+$body-background: $white;
+$body-font-color: $black;
+$body-font-family: 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif;
 $body-antialiased: true;
 $global-margin: 1rem;
 $global-padding: 1rem;
 $global-weight-normal: normal;
 $global-weight-bold: bold;
-$global-radius: 6px;
+$global-radius: 0;
 $global-text-direction: ltr;
 $global-flexbox: false;
 $print-transparent-backgrounds: true;
 
+@include add-foundation-colors;
 
 // 2. Breakpoints
 // --------------
 
 $breakpoints: (
   small: 0,
-  small2: 420px,
   medium: 640px,
   large: 1024px,
   xlarge: 1200px,
@@ -96,7 +94,10 @@ $breakpoint-classes: (small medium large);
 
 $grid-row-width: $global-width;
 $grid-column-count: 12;
-$grid-column-gutter: 12px;
+$grid-column-gutter: (
+  small: 20px,
+  medium: 30px,
+);
 $grid-column-align-edge: true;
 $block-grid-max: 8;
 
@@ -106,7 +107,7 @@ $block-grid-max: 8;
 $header-font-family: $body-font-family;
 $header-font-weight: $global-weight-normal;
 $header-font-style: normal;
-$font-family-monospace: 'Space Mono', monospace;
+$font-family-monospace: Consolas, 'Liberation Mono', Courier, monospace;
 $header-color: inherit;
 $header-lineheight: 1.4;
 $header-margin-bottom: 0.5rem;
@@ -131,7 +132,7 @@ $header-styles: (
 $header-text-rendering: optimizeLegibility;
 $small-font-size: 80%;
 $header-small-font-color: $medium-gray;
-$paragraph-lineheight: 1.4;
+$paragraph-lineheight: 1.6;
 $paragraph-margin-bottom: 1rem;
 $paragraph-text-rendering: optimizeLegibility;
 $code-color: $black;
